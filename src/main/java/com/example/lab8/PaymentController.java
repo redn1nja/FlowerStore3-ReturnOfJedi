@@ -20,7 +20,7 @@ import java.util.List;
 @RequestMapping(path="/api/pay")
 public class PaymentController {
     @GetMapping
-    public List<Order> getOrder(){
+    public String getOrder(){
         Flower f = new Flower(1, 15.0, FlowerColor.RED, 20.0, FlowerType.ROSE);
         FlowerPack p = new FlowerPack(f, 15);
         FlowerBucket buck = new FlowerBucket();
@@ -29,6 +29,6 @@ public class PaymentController {
         order.addItem(buck);
         order.setPaymentStrategy(new PayPalPay());
         order.setDeliveryStrategy(new PostDelivery());
-        return List.of(order);
+        return order.processOrder();
     }
 }
