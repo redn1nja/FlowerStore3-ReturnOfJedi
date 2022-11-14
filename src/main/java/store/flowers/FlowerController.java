@@ -20,8 +20,8 @@ public class FlowerController {
         return flowerService.getFlowers();
     }
 
-//    @PostMapping
-//    public void addFlower(@RequestBody Flower flower){
-//        flowerService.addFlower(flower);
-//    }
+    @PostMapping
+    public void addFlower(@RequestBody Flower flower){
+        flowerService.addFlower(flower);
+    }
 }

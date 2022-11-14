@@ -1,11 +1,11 @@
-GET http://localhost:8080/api/bucket
+GET http://localhost:8080/api/flower
 
 ###
-POST http://localhost:8080/api/bucket
+POST http://localhost:8080/api/flower
 Content-Type: application/json
 
 {
   "sepalLength": 100,
-  "color": "blue",
+  "color": "#0000FF",
   "price": 100
 }

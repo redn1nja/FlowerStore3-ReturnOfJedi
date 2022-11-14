@@ -18,12 +18,10 @@ public class Flower {
     private int id;
     @Getter
     private double sepalLength;
-    private FlowerColor color;
+    private String color;
     @Getter
     private double price;
-    private FlowerType flowerType;
     public String getColor() {
         return color.toString();
     }
-    public String getFlowerType() {return flowerType.toString();}
 }

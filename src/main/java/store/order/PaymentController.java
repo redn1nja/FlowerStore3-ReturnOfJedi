@@ -2,8 +2,6 @@ package store.order;
 
 
 import store.flowers.Flower;
-import store.flowers.FlowerColor;
-import store.flowers.FlowerType;
 import store.logic.FlowerBucket;
 import store.logic.FlowerPack;
 import store.order.delivery.PostDelivery;
@@ -17,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentController {
     @GetMapping
     public String getOrder(){
-        Flower f = new Flower(1, 15.0, FlowerColor.RED, 20.0, FlowerType.ROSE);
+        Flower f = new Flower(1, 15.0, "#0000FF", 20.0);
         FlowerPack p = new FlowerPack(f, 15);
         FlowerBucket buck = new FlowerBucket();
         buck.add(p);
