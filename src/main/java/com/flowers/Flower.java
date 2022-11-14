@@ -1,9 +1,6 @@
 package com.flowers;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +10,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter @Entity
-@Table
+@Table @ToString
 public class Flower {
 //    private int id;
     @Id @GeneratedValue

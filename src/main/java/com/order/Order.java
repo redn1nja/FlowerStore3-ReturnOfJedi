@@ -5,11 +5,12 @@ import com.order.delivery.Delivery;
 import com.order.payment.Payment;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Flow;
-@Getter
+@Getter @ToString
 public class Order {
     private final List<FlowerBucket> items = new ArrayList<>();
     private Payment payment;
