@@ -4,6 +4,7 @@ import com.flowers.*;
 import lombok.Getter;
 import lombok.Setter;
 
+@ToString
 public class FlowerPack {
     @Getter @Setter
     private Flower flower;
