@@ -3,6 +3,8 @@ package com.example.lab8;
 
 import com.flowers.Chamomile;
 import com.flowers.Flower;
+import com.flowers.FlowerColor;
+import com.flowers.FlowerType;
 import com.logic.FlowerBucket;
 import com.logic.FlowerPack;
 import com.order.Order;
@@ -19,7 +21,7 @@ import java.util.List;
 public class PaymentController {
     @GetMapping
     public List<Order> getOrder(){
-        Flower f = new Chamomile();
+        Flower f = new Flower(1, 15.0, FlowerColor.RED, 20.0, FlowerType.ROSE);
         FlowerPack p = new FlowerPack(f, 15);
         FlowerBucket buck = new FlowerBucket();
         buck.add(p);
