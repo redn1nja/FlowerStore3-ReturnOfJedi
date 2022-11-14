@@ -14,16 +14,16 @@ import javax.persistence.Table;
 public class Flower {
 //    private int id;
     @Id @GeneratedValue
+    @Getter
     private int id;
     @Getter
     private double sepalLength;
     private FlowerColor color;
     @Getter
     private double price;
-    @Getter
     private FlowerType flowerType;
-
     public String getColor() {
         return color.toString();
     }
+    public String getFlowerType() {return flowerType.toString();}
 }

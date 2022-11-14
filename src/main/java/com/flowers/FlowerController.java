@@ -1,17 +1,15 @@
-package com.example.lab8;
+package com.flowers;
 
 
-import com.flowers.Flower;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/bucket")
+@RequestMapping(path = "/api/flower")
 public class FlowerController {
-    private final FlowerService flowerService;
-
+    private FlowerService flowerService;
     @Autowired
     public FlowerController(FlowerService flowerService) {
         this.flowerService = flowerService;
@@ -22,8 +20,8 @@ public class FlowerController {
         return flowerService.getFlowers();
     }
 
-    @PostMapping
-    public void addFlower(@RequestBody Flower flower){
-        flowerService.addFlower(flower);
-    }
+//    @PostMapping
+//    public void addFlower(@RequestBody Flower flower){
+//        flowerService.addFlower(flower);
+//    }
 }

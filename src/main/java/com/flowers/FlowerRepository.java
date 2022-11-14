@@ -1,6 +1,5 @@
-package com.example.lab8;
+package com.flowers;
 
-import com.flowers.Flower;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
